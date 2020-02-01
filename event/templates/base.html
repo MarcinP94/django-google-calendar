@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+{% load static %}
+    <html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js "></script>
+        <link href="/static/Content/main.css" rel="stylesheet">
+
+        <nav class="navbar navbar-inverse" style="background-color:#5484ED">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="{% url 'event:home' %}" class="brand-header-logo js-lazy-loaded qa-js-lazy-loaded">
+                        <img id="logo" src="{% static '/Images/logo.png' %}" style="width:100px;" /></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'event:new' %}">Create event</a></li>
+                        <li><a href="{% url 'event:my_events' %}">My events</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user" ></span>
+                            <span class="username" >username</span>
+                        </a>
+                        </li>
+                        <li><a href="{% url 'event:sync' %}"><span class="glyphicon glyphicon-refresh" ></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+            {% block head %}
+    <meta charset="UTF-8">
+    <title>Google calendar</title>
+            {% endblock %}
+
+        </head>
+    <body>
+    {% block body %}
+
+    {% endblock %}
+
+
+    </body>
+
+</html>

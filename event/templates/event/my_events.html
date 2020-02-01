@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block content %}
+
+  <main>
+    <div class="container">
+        <div class="table-responsive text-nowrap">
+    <h2>My events</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Start date</th>
+            <th scope="col">Finish date</th>
+            <th scope="col">Remove</th>
+            <th scope="col">Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for element in object.all %}
+
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ element.title}}</td>
+            <td>{{ element.start }}</td>
+            <td>{{ element.end}}</td>
+            <td>
+                <a href="{% url 'event:delete' element.id %}"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+            <td>
+                <a href="{% url 'event:update' element.id %}"><i class="glyphicon glyphicon-edit"></i></a>
+            </td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan='5'>You don't have any events</td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+
+
+        </tbody>
+    </table>
+        </div>
+    </div>
+  </main>
+
+
+{% endblock content %}
+
+
+{% endblock %}

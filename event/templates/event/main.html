@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+<div class = "container">
+    <div class="jumbotron wow bounceInDown" style="background-color:#5484ED">
+        <h1 class="display-4"> My calendar </h1>
+
+        <p> Version 0.0 </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 wow bounceInLeft">
+            <h2>Create event</h2>
+
+            <p>
+                <a class="btn btn-default" href="{% url 'event:new' %}">Go &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-3 wow bounceInLeft">
+            <h2>My events</h2>
+
+            <p>
+                <a class="btn btn-default" href="{% url 'event:my_events' %}">Go &raquo;</a>
+            </p>
+        </div>
+
+
+{% load static %}
+
+    <link href="{% static 'Content/animate.css' %}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src= "{% static 'Scripts/wow.js' %}"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</div>
+
+
+{% endblock %}

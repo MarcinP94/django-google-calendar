@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+  <h1> Are you sure you want to delete  ?</h1>
+
+</form>
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class = "container">
+{{form.as_ul}}
+    <input type="submit" value="Submit" />
+    </div>
+</form>
+
+
+{% endblock %}
