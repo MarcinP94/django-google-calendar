@@ -19,16 +19,12 @@
 ### Tests
     To establisth tests put command manage.py test event
 ### Main page
-![alt tag](  https://gitlab.deployed.pl/viciu/django-google-calendar/uploads/533ee330eb1c7d0f2ac6ff0b32addaff/Main_view.PNG )
 
 ### Add new record
 * Data picker available 
-![alt tag]( https://gitlab.deployed.pl/viciu/django-google-calendar/uploads/6c45accd053b094da3aa7f7baba1cb8c/add_new_record1.PNG )
 
 ### My event table
 * You can edit and remove records (with synchronization)
-![alt tag]( https://gitlab.deployed.pl/viciu/django-google-calendar/uploads/caa031791c43c6626ee682fa085a8bbd/My_events_table.PNG )
 
 ### Synchronize records with google calendar
 * To synchronize records between google calendar and database put synchronize
-![alt tag](https://gitlab.deployed.pl/viciu/django-google-calendar/uploads/d80d34d0222d16805145b561ed6c2934/Synchronize.PNG)
